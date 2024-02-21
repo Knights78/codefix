@@ -60,7 +60,7 @@ app.post("/form",async(req,res)=>{
         const password=req.body.password
         try{
         const user = await collection.findOne({ email, password });
-        if(user)//if it is tru means there is such email and password in database then only it will redirect to that homepage
+        if(user)//if it is true means there is such email and password in database then only it will redirect to that homepage
         {
             res.redirect("/home")
            
